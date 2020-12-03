@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BouquetEngine.Model;
+using BouquetEngine.Storage;
 
 namespace BouquetMvc
 {
@@ -24,6 +26,8 @@ namespace BouquetMvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            IBouquetStorage bouquetStorage = new BouquetListStorage();
+            services.AddSingleton<IBouquetStorage>(bouquetStorage);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

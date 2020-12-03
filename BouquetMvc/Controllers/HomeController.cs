@@ -6,21 +6,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BouquetMvc.Models;
+using BouquetEngine.Storage;
+using BouquetEngine.Model;
 
 namespace BouquetMvc.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IBouquetStorage _bouquetStorage;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IBouquetStorage bouquetStorage)
         {
             _logger = logger;
+            _bouquetStorage = bouquetStorage;
         }
+
 
         public IActionResult Index()
         {
-            return View();
+
+            List<Bouquet> bouquets = _bouquetStorage.GetAll();
+            return View(bouquets);
         }
 
         public IActionResult Privacy()

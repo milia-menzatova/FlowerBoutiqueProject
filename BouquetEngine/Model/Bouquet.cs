@@ -1,5 +1,5 @@
 using System;
-namespace BouquetMvc.Models
+namespace BouquetEngine.Model
 {
     public class Bouquet
     {
