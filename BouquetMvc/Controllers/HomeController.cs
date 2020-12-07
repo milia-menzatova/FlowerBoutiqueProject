@@ -25,7 +25,6 @@ namespace BouquetMvc.Controllers
 
         public IActionResult Index()
         {
-
             List<Bouquet> bouquets = _bouquetStorage.GetAll();
             return View(bouquets);
         }

@@ -29,7 +29,19 @@ namespace BouquetEngine.Storage
         public List<Bouquet> GetAll()
         {
             return _bouquetList;
-
         }
+
+        public Bouquet FindById(string bouquetId)
+        {
+            foreach (var bouquet in this._bouquetList)
+            {
+                if (bouquetId.Equals(bouquet.Id.ToString()))
+                {
+                    return bouquet;
+                }
+            }
+            return null;
+        }
+
     }
 }
