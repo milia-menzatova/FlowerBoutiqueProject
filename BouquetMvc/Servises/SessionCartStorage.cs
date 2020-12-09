@@ -43,5 +43,10 @@ namespace BouquetMvc.Servises
             sessionCart.items.Remove(bouquet);
             session.SetObjectAsJson("cart", sessionCart);
         }
+
+        public void RemoveCartFromSession(ISession session)
+        {
+            session.Clear();
+        }
     }
 }

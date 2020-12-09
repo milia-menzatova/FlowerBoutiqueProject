@@ -28,8 +28,10 @@ namespace BouquetMvc
         {
             services.AddControllersWithViews();
             IBouquetStorage bouquetStorage = new BouquetListStorage();
+            IOrderStorage orderStorage = new OrderListStorage();
 
             services.AddSingleton<IBouquetStorage>(bouquetStorage);
+            services.AddSingleton<IOrderStorage>(orderStorage);
             services.AddSingleton<SessionCartStorage>(new SessionCartStorage());
             services.AddSession(options =>
             {

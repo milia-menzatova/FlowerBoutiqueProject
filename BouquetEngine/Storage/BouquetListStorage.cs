@@ -23,6 +23,10 @@ namespace BouquetEngine.Storage
                                            "https://flower-delivery-bangkok.com/wp-content/uploads/2019/04/flower-delivery-bangkok-406-500x583.jpg"));
             _bouquetList.Add(new Bouquet(Guid.NewGuid(), "White roses", 95.00, "White roses",
                                             "https://flower-delivery-bangkok.com/wp-content/uploads/2019/04/bangkok-flower-delivery-33-500x583.jpg"));
+            _bouquetList.Add(new Bouquet(Guid.NewGuid(), "Birthday bouquet", 105.00, "Birthday Bouquet",
+                                            "https://flower-delivery-bangkok.com/wp-content/uploads/2019/04/flower-delivery-bangkok-07-500x583.jpg"));
+            _bouquetList.Add(new Bouquet(Guid.NewGuid(), "Bride bouquets", 120.00, "Bride bouquets",
+                                            "https://i.pinimg.com/564x/b8/c0/16/b8c016954a60affccc4897788f0a2e0b.jpg"));
         }
 
 
